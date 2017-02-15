@@ -23,6 +23,13 @@ CREATE TABLE chat_log (
     channel character varying(64) NOT NULL,
     sender character varying(64) NOT NULL,
     message character varying(512) NOT NULL,
+    moderator integer NOT NULL,
+    sub integer NOT NULL,
+    badges character varying(128) NOT NULL,
+    color character varying(8) NOT NULL,
+    subbadge character varying(64) NOT NULL,
+    turbo integer NOT NULL,
+    prime integer NOT NULL,
     date bigint NOT NULL
 );
 

@@ -89,6 +89,7 @@ class TwitchBot(IRCBot, threading.Thread):
             self.channels = [c for c in self.channels if c not in channels]
 
     def log(self, sender, message, channel):
+        #IMPORTANT TO MODIFY ADD ALL DATA TO LOG
         if sender == settings.IRC['NICK']:
             self.logger.info("%s, %s: %s " % (channel, sender, message))
             return

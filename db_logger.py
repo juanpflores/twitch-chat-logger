@@ -17,6 +17,7 @@ class DatabaseLogger:
         self.conn.close()
 
     def log_chat(self, sender, message, channel):
+        #Important to Modify
         if len(message) > 512:
             message = message[:512]
 
