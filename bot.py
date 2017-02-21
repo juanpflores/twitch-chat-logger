@@ -88,15 +88,14 @@ class TwitchBot(IRCBot, threading.Thread):
                 self.conn.part(channel)
             self.channels = [c for c in self.channels if c not in channels]
 
-    def log(self, sender, message, channel):
-        #IMPORTANT TO MODIFY ADD ALL DATA TO LOG
+    def log(self, sender, message, channel, moderator, sub, badges, color, turbo):
         if sender == settings.IRC['NICK']:
             self.logger.info("%s, %s: %s " % (channel, sender, message))
             return
         if message in self.MESSAGES_TO_IGNORE:
             return
 
-        self.chat_logger.log_chat(sender, message, channel)
+        self.chat_logger.log_chat(sender, message, channel, moderator, sub, badges, color, turbo)
 
     def command_patterns(self):
         return (
