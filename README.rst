@@ -1,4 +1,4 @@
-twitch-chat-logger
+Twitch Chat Logger
 ==================
 
 A simple python app for logging twitch's chat to a PostgreSQL database. It
